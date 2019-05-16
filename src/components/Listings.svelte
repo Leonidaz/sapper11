@@ -3,10 +3,11 @@
     import ListingCard from '../components/ListingCard.svelte';
     import { getListings, listings } from '../state/machines/listings'; 
     import client from '../store/client';
+    import {get} from 'svelte/store';
 
-    // onMount(() => {
-    //     getListings()
-    // })
+    onMount(() => {
+        console.log("store listings is:", get(listings));
+    })
 
     export let cache;
 
